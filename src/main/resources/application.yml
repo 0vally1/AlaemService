@@ -1,0 +1,27 @@
+
+server:
+  port: 8085
+  tomcat:
+    uri-encoding: UTF-8
+    max-connections: 5000
+
+
+spring:
+  application:
+    name: AlarmServiceApplication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

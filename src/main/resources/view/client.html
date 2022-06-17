@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        // 打开一个 web socket
+        var ws = new WebSocket("ws://127.0.0.1:8085/call/center/123");
+        ws.onopen = function(){
+            // Web Socket 已连接上，使用 send() 方法发送数据
+            ws.send("请求open");
+        };
+        ws.onmessage = function (evt) {
+            var received_msg = evt.data;
+            alert("数据已接收...");
+            alert(received_msg);
+        };
+        ws.onclose = function() {
+            // 关闭 websocket
+            alert("连接已关闭...");
+        };
+        $(document).ready(function(){
+            $("#button").click(function(){
+                ws.send($("#text").val());
+                console.log($("#text").val())
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="text" id="text">
+<button id="button">发送</button>
+</body>
+</html>
