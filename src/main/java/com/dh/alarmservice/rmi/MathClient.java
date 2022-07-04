@@ -14,9 +14,9 @@ public class MathClient {
             // 从Registry中检索远程对象的存根/代理
             IRemoteMath remoteMath = (IRemoteMath)registry.lookup("Compute");
             // 调用远程对象的方法
-            double addResult = remoteMath.add(5.0, 3.0);
+            double addResult = remoteMath.add(15.0, 13.0);
             System.out.println("5.0 + 3.0 = " + addResult);
-            double subResult = remoteMath.subtract(5.0, 3.0);
+            double subResult = remoteMath.subtract(15.0, 13.0);
             System.out.println("5.0 - 3.0 = " + subResult);
         }catch(Exception e) {
             e.printStackTrace();
