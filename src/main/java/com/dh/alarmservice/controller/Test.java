@@ -15,7 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@Controller("testController")
+/**
+ * 设计模式 策略+工厂
+ */
 @RestController
 @RequestMapping("testController")
 public class Test {
